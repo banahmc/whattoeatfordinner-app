@@ -1,1 +1,0 @@
-export const RECIPE_API_RANDOM_RECIPE_URL = `${process.env.RECIPE_API_URL_BASE}/api/recipes/random`;

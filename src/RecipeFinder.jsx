@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import RecipeInfo from './RecipeInfo';
 
-const recipeApiRandomRecipeUrl = `${process.env.REACT_APP_RECIPE_API_URL_BASE}${process.env.REACT_APP_RECIPE_API_RANDOM_RECIPE_URL}`;
-
 function RecipeFinder() {
   const [recipe, setRecipe] = useState(null);
   const [isLoading, setLoading] = useState(false);
@@ -15,7 +13,7 @@ function RecipeFinder() {
     try {
       setError(false);
       setLoading(true);
-      const response = await fetch(recipeApiRandomRecipeUrl, { signal: abortSignal });
+      const response = await fetch(process.env.REACT_APP_RECIPE_API_RANDOM_RECIPE_URL, { signal: abortSignal });
       const recipe = await response.json();
       setRecipe(recipe);
     } catch (err) {

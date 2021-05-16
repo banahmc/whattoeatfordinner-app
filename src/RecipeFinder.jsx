@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { API_URL_RECIPE_RANDOM } from './Recipe.api';
+import React, { useState } from 'react';
+import { RECIPE_API_RANDOM_RECIPE_URL } from './Recipe.api';
 import RecipeInfo from './RecipeInfo';
 
 function RecipeFinder() {
@@ -14,7 +14,7 @@ function RecipeFinder() {
     try {
       setError(false);
       setLoading(true);
-      const response = await fetch(API_URL_RECIPE_RANDOM, { signal: abortSignal });
+      const response = await fetch(RECIPE_API_RANDOM_RECIPE_URL, { signal: abortSignal });
       const recipe = await response.json();
       setRecipe(recipe);
     } catch (err) {

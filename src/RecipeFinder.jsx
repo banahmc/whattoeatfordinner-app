@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import RecipeInfo from './RecipeInfo';
+import runtimeEnv from '@mars/heroku-js-runtime-env';
 
-const recipeApiRandomRecipeUrl = `${process.env.REACT_APP_RECIPE_API_URL_BASE}${process.env.REACT_APP_RECIPE_API_RANDOM_RECIPE_URL}`;
+const env = runtimeEnv();
+const recipeApiRandomRecipeUrl = `${env.REACT_APP_RECIPE_API_URL_BASE}${env.REACT_APP_RECIPE_API_RANDOM_RECIPE_URL}`;
 
 function RecipeFinder() {
   const [recipe, setRecipe] = useState(null);

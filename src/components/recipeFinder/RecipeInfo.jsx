@@ -10,7 +10,7 @@ function Recipe({ recipe }) {
       <div className='Recipe-container'>
         <div className='Recipe'>
           <div className='Recipe-title'>
-            <a href={url} target='_open'>{title}, added on {dateAdded}.</a>
+            <a href={url} target='_open'>{title}, added on {dateAdded}</a>
           </div>
           <img src={imageUrl} alt='recipe' />
         </div>

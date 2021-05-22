@@ -1,5 +1,5 @@
 import './App.css';
-import RecipeFinder from './RecipeFinder';
+import { RecipeFinder } from '../recipeFinder';
 
 function App() {
   return (
